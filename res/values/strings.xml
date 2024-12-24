@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">تحقق من رقم الهاتف</string>
+    <string name="phone_number_hint">أدخل رقم الهاتف</string>
+    <string name="verification_code_hint">أدخل كود التحقق</string>
+    <string name="send_code_button">إرسال كود التحقق</string>
+    <string name="verify_button">تحقق</string>
+    <string name="verification_failed">فشل التحقق!</string>
+    <string name="verification_successful">تم التحقق بنجاح!</string>
+    <string name="enter_phone_number">أدخل رقم الهاتف!</string>
+    <string name="enter_verification_code">أدخل الكود!</string>
+</resources>

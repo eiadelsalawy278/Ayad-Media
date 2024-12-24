@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayad Media</title>
+    <style>
+        /* إعدادات عامة */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* الحاوية */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        /* صورة الشعار */
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* عنوان التطبيق */
+        h1 {
+            font-size: 2.2rem;
+            margin: 20px 0;
+            color: #f1c40f;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        /* حقل الإدخال */
+        input[type="text"], input[type="password"], input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-size: 1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+            outline: none;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        }
+
+        /* زر إرسال الكود */
+        button {
+            background-color: #0066CC;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 90%;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        /* رابط الصفحة */
+        p {
+            margin-top: 20px;
+            color: #f1c40f;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f1c40f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- شعار التطبيق -->
+        <div class="logo">
+            <img src="logo.png" alt="Ayad Media Logo" />
+        </div>
+
+        <!-- عنوان التطبيق -->
+        <h1>Ayad Media</h1>
+
+        <!-- حقل إدخال رقم الهاتف -->
+        <input type="text" id="phoneNumber" placeholder="أدخل رقم الهاتف" />
+
+        <!-- زر إرسال الكود -->
+        <button onclick="sendVerificationCode()">إرسال الكود</button>
+
+        <!-- رابط صفحة المساعدة أو الشروط -->
+        <p><a href="#">مساعدة</a></p>
+    </div>
+
+    <script>
+        function sendVerificationCode() {
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            if (phoneNumber) {
+                alert('تم إرسال الكود إلى ' + phoneNumber);
+                // هنا يمكن دمج خدمة إرسال الكود مثل Twilio أو Firebase
+            } else {
+                alert('يرجى إدخال رقم الهاتف');
+            }
+        }
+    </script>
+
+</body>
+</html>
